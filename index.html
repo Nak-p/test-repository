@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antigravity Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Antigravity Demo</h1>
+            <p>AIエージェントによる自動生成デモ</p>
+        </header>
+
+        <main class="card">
+            <h2>機能チェックリスト</h2>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+
+            <div class="input-group">
+                <select id="prioritySelect">
+                    <option value="low">低</option>
+                    <option value="medium" selected>中</option>
+                    <option value="high">高</option>
+                </select>
+                <input type="text" id="taskInput" placeholder="新しいタスクを入力..." autocomplete="off">
+                <button id="addTaskBtn">追加</button>
+            </div>
+
+            <ul id="taskList" class="task-list">
+                <li class="task-item priority-medium" data-id="1">
+                    <span class="checkbox"></span>
+                    <span class="text">HTML構造の生成</span>
+                    <button class="delete-btn" aria-label="削除">×</button>
+                </li>
+                <li class="task-item priority-medium" data-id="2">
+                    <span class="checkbox"></span>
+                    <span class="text">モダンなCSSデザイン適用</span>
+                    <button class="delete-btn" aria-label="削除">×</button>
+                </li>
+                <li class="task-item priority-medium" data-id="3">
+                    <span class="checkbox"></span>
+                    <span class="text">JavaScriptインタラクション</span>
+                    <button class="delete-btn" aria-label="削除">×</button>
+                </li>
+                <li class="task-item priority-medium" data-id="4">
+                    <span class="checkbox"></span>
+                    <span class="text">シームレスな体験</span>
+                    <button class="delete-btn" aria-label="削除">×</button>
+                </li>
+            </ul>
+
+            <div id="completionMessage" class="completion-message hidden">
+                <h3>🎉 すべて完了！</h3>
+                <p>次のタスクを指示してください。</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
